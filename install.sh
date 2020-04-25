@@ -27,6 +27,3 @@ if [[ `uname` == 'Darwin' ]]; then
   grep -Fxq '/usr/local/bin/zsh' /etc/shells || sudo bash -c "echo /usr/local/bin/zsh >> /etc/shells"
   chsh -s /usr/local/bin/zsh $USER
 fi
-
-# Restore backup
-rclone/sync.sh sync
